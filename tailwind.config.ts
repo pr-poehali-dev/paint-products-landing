@@ -70,10 +70,11 @@ export default {
 					900: '#111820',
 					950: '#080d12',
 				},
-				fire: {
-					400: '#ff6b35',
-					500: '#e85d26',
-					600: '#c44d1a',
+				navy: {
+					400: '#3b82f6',
+					500: '#2563eb',
+					600: '#1d4ed8',
+					700: '#1e3a8a',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
