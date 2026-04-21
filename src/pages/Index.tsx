@@ -15,48 +15,69 @@ const NAV_ITEMS = [
 ];
 
 const PRODUCTS = [
-  { id: 1, name: "Смазка промышленная МС-1000", category: "Смазки", packing: "1 кг", desc: "Высокотемпературная смазка для подшипников и узлов качения", article: "MC-1000-1" },
-  { id: 2, name: "Смазка промышленная МС-1000", category: "Смазки", packing: "5 кг", desc: "Высокотемпературная смазка для подшипников и узлов качения", article: "MC-1000-5" },
-  { id: 3, name: "Смазка промышленная МС-1000", category: "Смазки", packing: "18 кг", desc: "Высокотемпературная смазка для подшипников и узлов качения", article: "MC-1000-18" },
-  { id: 4, name: "Масло гидравлическое ИГП-30", category: "Масла", packing: "5 л", desc: "Минеральное масло для гидравлических систем с рабочим давлением до 350 бар", article: "IGP-30-5" },
-  { id: 5, name: "Масло гидравлическое ИГП-30", category: "Масла", packing: "20 л", desc: "Минеральное масло для гидравлических систем с рабочим давлением до 350 бар", article: "IGP-30-20" },
-  { id: 6, name: "Масло гидравлическое ИГП-30", category: "Масла", packing: "200 л", desc: "Минеральное масло для гидравлических систем с рабочим давлением до 350 бар", article: "IGP-30-200" },
-  { id: 7, name: "Антикоррозийный состав АК-70", category: "Защита металла", packing: "1 кг", desc: "Защитное покрытие от коррозии для промышленного оборудования", article: "AK-70-1" },
-  { id: 8, name: "Антикоррозийный состав АК-70", category: "Защита металла", packing: "5 кг", desc: "Защитное покрытие от коррозии для промышленного оборудования", article: "AK-70-5" },
-  { id: 9, name: "Промывочная жидкость ПЖ-120", category: "Очистители", packing: "5 л", desc: "Концентрат для промывки топливных и масляных систем", article: "PJ-120-5" },
-  { id: 10, name: "Промывочная жидкость ПЖ-120", category: "Очистители", packing: "20 л", desc: "Концентрат для промывки топливных и масляных систем", article: "PJ-120-20" },
-  { id: 11, name: "Редукторное масло РМ-680", category: "Масла", packing: "10 л", desc: "Синтетическое масло для редукторов и зубчатых передач", article: "RM-680-10" },
-  { id: 12, name: "Редукторное масло РМ-680", category: "Масла", packing: "200 л", desc: "Синтетическое масло для редукторов и зубчатых передач", article: "RM-680-200" },
+  // Краски фасадные
+  { id: 1, name: "Краска фасадная AKD", category: "Краски фасадные", packing: "3 кг", desc: "Атмосферостойкая краска для наружных работ. Защита от осадков, UV-стойкость.", article: "AKD-F-3" },
+  { id: 2, name: "Краска фасадная AKD", category: "Краски фасадные", packing: "10 кг", desc: "Атмосферостойкая краска для наружных работ. Защита от осадков, UV-стойкость.", article: "AKD-F-10" },
+  { id: 3, name: "Краска фасадная AKD", category: "Краски фасадные", packing: "25 кг", desc: "Атмосферостойкая краска для наружных работ. Защита от осадков, UV-стойкость.", article: "AKD-F-25" },
+  // Краски интерьерные
+  { id: 4, name: "Краска интерьерная AKD", category: "Краски интерьерные", packing: "3 кг", desc: "Водно-дисперсионная краска для внутренних работ. Моющаяся, без запаха.", article: "AKD-I-3" },
+  { id: 5, name: "Краска интерьерная AKD", category: "Краски интерьерные", packing: "10 кг", desc: "Водно-дисперсионная краска для внутренних работ. Моющаяся, без запаха.", article: "AKD-I-10" },
+  { id: 6, name: "Краска интерьерная AKD", category: "Краски интерьерные", packing: "25 кг", desc: "Водно-дисперсионная краска для внутренних работ. Моющаяся, без запаха.", article: "AKD-I-25" },
+  // Краски фактурные
+  { id: 7, name: "Краска фактурная AKD", category: "Краски фактурные", packing: "7 кг", desc: "Декоративное фактурное покрытие с эффектом рельефа. Для интерьера и фасадов.", article: "AKD-T-7" },
+  { id: 8, name: "Краска фактурная AKD", category: "Краски фактурные", packing: "15 кг", desc: "Декоративное фактурное покрытие с эффектом рельефа. Для интерьера и фасадов.", article: "AKD-T-15" },
+  // Грунтовки
+  { id: 9, name: "Грунтовка универсальная AKD", category: "Грунтовки", packing: "5 кг", desc: "Универсальная грунтовка глубокого проникновения для пористых поверхностей.", article: "AKD-G-5" },
+  { id: 10, name: "Грунтовка универсальная AKD", category: "Грунтовки", packing: "10 кг", desc: "Универсальная грунтовка глубокого проникновения для пористых поверхностей.", article: "AKD-G-10" },
+  { id: 11, name: "Бетонконтакт AKD", category: "Грунтовки", packing: "5 кг", desc: "Адгезионная грунтовка для гладких бетонных и оштукатуренных поверхностей.", article: "AKD-BK-5" },
+  { id: 12, name: "Бетонконтакт AKD", category: "Грунтовки", packing: "20 кг", desc: "Адгезионная грунтовка для гладких бетонных и оштукатуренных поверхностей.", article: "AKD-BK-20" },
+  // Строительные материалы
+  { id: 13, name: "Шпатлёвка финишная AKD", category: "Строительные материалы", packing: "5 кг", desc: "Полимерная шпатлёвка для финишного выравнивания стен и потолков.", article: "AKD-SH-5" },
+  { id: 14, name: "Шпатлёвка финишная AKD", category: "Строительные материалы", packing: "20 кг", desc: "Полимерная шпатлёвка для финишного выравнивания стен и потолков.", article: "AKD-SH-20" },
+  { id: 15, name: "Клей ПВА строительный AKD", category: "Строительные материалы", packing: "1 кг", desc: "Универсальный ПВА-клей для строительных и отделочных работ.", article: "AKD-PVA-1" },
+  { id: 16, name: "Клей ПВА строительный AKD", category: "Строительные материалы", packing: "5 кг", desc: "Универсальный ПВА-клей для строительных и отделочных работ.", article: "AKD-PVA-5" },
+  { id: 17, name: "Клей строительный AKD", category: "Строительные материалы", packing: "5 кг", desc: "Усиленный строительный клей для монтажных работ и приклеивания материалов.", article: "AKD-KS-5" },
+  { id: 18, name: "Клей жидкое стекло AKD", category: "Строительные материалы", packing: "5 кг", desc: "Силикатный клей-жидкое стекло. Гидроизоляция, огнезащита, укрепление.", article: "AKD-JS-5" },
+  // Растворители и масла
+  { id: 19, name: "Ацетон технический AKD", category: "Растворители", packing: "1 л", desc: "Технический ацетон для обезжиривания поверхностей и разбавления лаков.", article: "AKD-AC-1" },
+  { id: 20, name: "Ацетон технический AKD", category: "Растворители", packing: "5 л", desc: "Технический ацетон для обезжиривания поверхностей и разбавления лаков.", article: "AKD-AC-5" },
+  { id: 21, name: "Олифа натуральная AKD", category: "Растворители", packing: "1 л", desc: "Натуральная олифа для пропитки и грунтования деревянных поверхностей.", article: "AKD-OL-1" },
+  { id: 22, name: "Олифа натуральная AKD", category: "Растворители", packing: "5 л", desc: "Натуральная олифа для пропитки и грунтования деревянных поверхностей.", article: "AKD-OL-5" },
+  { id: 23, name: "Пластификатор жидкое строительное мыло AKD 10%", category: "Растворители", packing: "5 л", desc: "Жидкое строительное мыло-пластификатор. Концентрация 10%.", article: "AKD-PL-10-5" },
+  { id: 24, name: "Пластификатор жидкое строительное мыло AKD 20%", category: "Растворители", packing: "5 л", desc: "Жидкое строительное мыло-пластификатор. Концентрация 20%.", article: "AKD-PL-20-5" },
+  // Моющие средства для авто
+  { id: 25, name: "Пена для бесконтактной мойки AKD", category: "Автохимия", packing: "5 кг", desc: "Активная пена для бесконтактной мойки автомобилей. Быстрое удаление грязи.", article: "AKD-AM-5" },
+  { id: 26, name: "Пена для бесконтактной мойки AKD", category: "Автохимия", packing: "20 кг", desc: "Активная пена для бесконтактной мойки автомобилей. Быстрое удаление грязи.", article: "AKD-AM-20" },
+  // Сад-Эксперт
+  { id: 27, name: "Краска защитная для деревьев от зайцев", category: "Сад-Эксперт", packing: "1.3 кг", desc: "Серия Сад-Эксперт. Защита стволов деревьев от грызунов и зайцев.", article: "SE-KZ-1.3" },
+  { id: 28, name: "Краска защитная для деревьев латексная Про", category: "Сад-Эксперт", packing: "1.3 кг", desc: "Серия Сад-Эксперт. Профессиональная латексная садовая краска. Высокая адгезия.", article: "SE-LP-1.3" },
+  { id: 29, name: "Краска защитная для деревьев латексная Стандарт", category: "Сад-Эксперт", packing: "1.3 кг", desc: "Серия Сад-Эксперт. Латексная садовая краска. Стандартная защита и побелка.", article: "SE-LS-1.3" },
+  { id: 30, name: "Сера коллоидная в суспензии 50%", category: "Сад-Эксперт", packing: "1 кг", desc: "Серия Сад-Эксперт. Коллоидная сера 50% суспензия для защиты растений от вредителей.", article: "SE-SK-1" },
 ];
 
-const CATEGORIES = ["Все", "Смазки", "Масла", "Защита металла", "Очистители"];
-const PACKINGS = ["Все", "1 кг", "5 кг", "5 л", "10 л", "18 кг", "20 л", "200 л"];
+const CATEGORIES = ["Все", "Краски фасадные", "Краски интерьерные", "Краски фактурные", "Грунтовки", "Строительные материалы", "Растворители", "Автохимия", "Сад-Эксперт"];
+const PACKINGS = ["Все", "1 кг", "1 л", "1.3 кг", "3 кг", "5 кг", "5 л", "7 кг", "10 кг", "15 кг", "20 кг", "20 л", "25 кг"];
 
 const PRICELISTS = [
-  { name: "Полный прайс-лист", date: "Апрель 2026", size: "PDF, 420 КБ", file: "#" },
-  { name: "Прайс-лист: Смазки", date: "Апрель 2026", size: "PDF, 180 КБ", file: "#" },
-  { name: "Прайс-лист: Масла", date: "Апрель 2026", size: "PDF, 210 КБ", file: "#" },
-  { name: "Прайс-лист: Защита металла", date: "Март 2026", size: "PDF, 95 КБ", file: "#" },
+  { name: "Полный прайс-лист AKD", date: "Апрель 2026", size: "PDF, 380 КБ", file: "#" },
+  { name: "Прайс-лист: ЛКМ и грунтовки", date: "Апрель 2026", size: "PDF, 210 КБ", file: "#" },
+  { name: "Прайс-лист: Автохимия", date: "Апрель 2026", size: "PDF, 95 КБ", file: "#" },
+  { name: "Прайс-лист: Сад-Эксперт", date: "Апрель 2026", size: "PDF, 75 КБ", file: "#" },
 ];
 
-const CERTS = [
-  { name: "ISO 9001:2015", org: "Система менеджмента качества", year: "2024" },
-  { name: "ГОСТ Р ИСО 9001", org: "Национальный стандарт РФ", year: "2024" },
-  { name: "ТУ 38.301-40-51", org: "Технические условия на масла", year: "2023" },
-  { name: "Соответствие REACH", org: "Европейский регламент по химии", year: "2024" },
-];
+const CERTS: { name: string; org: string; year: string }[] = [];
 
 const NEWS = [
-  { date: "15 апр 2026", title: "Расширение производственных мощностей в 2026 году", text: "Запущена новая линия по производству синтетических масел. Производительность увеличена на 40%." },
-  { date: "02 мар 2026", title: "Участие в выставке Нефтегаз-2026", text: "Компания представила линейку новых продуктов для нефтегазовой отрасли на крупнейшей профессиональной выставке." },
-  { date: "18 янв 2026", title: "Новый дистрибьютор в Сибирском федеральном округе", text: "Подписано соглашение о партнёрстве с ведущим поставщиком промышленной химии в регионе." },
+  { date: "10 апр 2026", title: "Запуск серии «Сад-Эксперт»", text: "Выпущена линейка садовых защитных средств под маркой Сад-Эксперт: краски для деревьев и коллоидная сера." },
+  { date: "15 мар 2026", title: "Расширение ассортимента автохимии", text: "В производство запущена активная пена для бесконтактной мойки. Доступна в фасовке 5 и 20 кг." },
+  { date: "20 янв 2026", title: "AKD начинает производство", text: "Завод AKD (Арт Корд Дизайн) запустил серийное производство лакокрасочных материалов и строительной химии." },
 ];
 
 const STATS = [
-  { value: "25+", label: "Лет на рынке" },
-  { value: "500+", label: "Наименований продукции" },
-  { value: "3 000+", label: "Клиентов по России" },
-  { value: "ISO 9001", label: "Сертификация качества" },
+  { value: "2024", label: "Год основания" },
+  { value: "30+", label: "Наименований продукции" },
+  { value: "50 т", label: "Производство в месяц" },
+  { value: "4 серии", label: "Товарных линеек" },
 ];
 
 export default function Index() {
@@ -94,11 +115,11 @@ export default function Index() {
             {/* Logo */}
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollTo("home")}>
               <div className="w-8 h-8 fire-gradient flex items-center justify-center">
-                <Icon name="Cog" size={18} className="text-white" />
+                <Icon name="Droplets" size={18} className="text-white" />
               </div>
               <div>
-                <div className="font-oswald font-700 text-lg leading-none tracking-wider text-foreground">ПРОМТЕХ</div>
-                <div className="text-[9px] text-muted-foreground tracking-[0.2em] uppercase leading-none mt-0.5">Промышленное производство</div>
+                <div className="font-oswald font-700 text-lg leading-none tracking-wider text-foreground">AKD</div>
+                <div className="text-[9px] text-muted-foreground tracking-[0.2em] uppercase leading-none mt-0.5">Арт Корд Дизайн</div>
               </div>
             </div>
 
@@ -164,16 +185,16 @@ export default function Index() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-0.5 bg-[hsl(var(--primary))]" />
-              <span className="font-ibm text-[hsl(var(--primary))] text-sm tracking-widest uppercase">С 1999 года</span>
+              <span className="font-ibm text-[hsl(var(--primary))] text-sm tracking-widest uppercase">С 2024 года</span>
             </div>
             <h1 className="font-oswald text-5xl sm:text-7xl font-bold leading-none tracking-tight text-foreground mb-6">
-              ПРОМЫШЛЕННАЯ<br />
-              <span className="text-[hsl(var(--primary))]">ХИМИЯ</span><br />
-              ВЫСШЕГО КЛАССА
+              ЛАКОКРАСОЧНЫЕ<br />
+              <span className="text-[hsl(var(--primary))]">МАТЕРИАЛЫ</span><br />
+              СОБСТВЕННОГО ПРОИЗВОДСТВА
             </h1>
             <p className="font-ibm text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-              Смазки, масла и защитные составы для тяжёлой промышленности.
-              Сертифицировано по ISO 9001. Доставка по всей России.
+              Краски, грунтовки, шпатлёвки, клеи и строительная химия от производителя.
+              Полный цикл производства жидких ЛКМ. Доставка по всей России.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -216,17 +237,17 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="font-ibm text-muted-foreground leading-relaxed mb-6 text-base">
-                Наш завод оснащён современными производственными линиями с суммарной мощностью <strong className="text-foreground">12 000 тонн продукции в год</strong>. Контроль качества осуществляется на каждом этапе — от входного контроля сырья до отгрузки готовой продукции.
+                Производственный комплекс AKD площадью <strong className="text-foreground">4 500 м²</strong> специализируется на полном цикле выпуска жидких лакокрасочных материалов и строительной химии — от смешивания компонентов до фасовки и отгрузки готовой продукции.
               </p>
               <p className="font-ibm text-muted-foreground leading-relaxed mb-8 text-base">
-                Лабораторный комплекс площадью 800 м² позволяет проводить полный цикл испытаний по ГОСТ и международным стандартам. Каждая партия сопровождается паспортом качества.
+                Лаборатория площадью 100 м² обеспечивает входной контроль сырья и выходной контроль качества каждой партии. Ежемесячная мощность — до 50 тонн готовой продукции.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { icon: "Factory", label: "Площадь завода", value: "18 000 м²" },
-                  { icon: "FlaskConical", label: "Объём производства", value: "12 000 т/год" },
-                  { icon: "Users", label: "Сотрудников", value: "320 человек" },
-                  { icon: "Microscope", label: "Лаборатория", value: "800 м²" },
+                  { icon: "Factory", label: "Площадь завода", value: "4 500 м²" },
+                  { icon: "FlaskConical", label: "Производство", value: "50 т/мес" },
+                  { icon: "Microscope", label: "Лаборатория", value: "100 м²" },
+                  { icon: "PackageCheck", label: "Контроль качества", value: "100%" },
                 ].map((item) => (
                   <div key={item.label} className="bg-card border border-border p-4">
                     <Icon name={item.icon} size={20} className="text-[hsl(var(--primary))] mb-2" />
@@ -238,11 +259,11 @@ export default function Index() {
             </div>
             <div className="relative">
               <div className="bg-card border border-border p-1">
-                <img src={HERO_IMAGE} alt="Производство" className="w-full h-80 object-cover" />
+                <img src={HERO_IMAGE} alt="Производство AKD" className="w-full h-80 object-cover" />
               </div>
               <div className="absolute -bottom-4 -left-4 fire-gradient p-4 w-36 text-center">
-                <div className="font-oswald text-3xl font-bold text-white">25+</div>
-                <div className="font-ibm text-xs text-white/80 uppercase tracking-wide">лет опыта</div>
+                <div className="font-oswald text-3xl font-bold text-white">2024</div>
+                <div className="font-ibm text-xs text-white/80 uppercase tracking-wide">год основания</div>
               </div>
             </div>
           </div>
@@ -258,13 +279,13 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <p className="font-ibm text-muted-foreground leading-relaxed mb-6 text-base">
-                <strong className="text-foreground font-oswald text-xl">ПРОМТЕХ</strong> — российский производитель промышленной химии с более чем четвертьвековой историей. Мы специализируемся на разработке и производстве смазочных материалов, технических масел и защитных составов для предприятий машиностроения, металлургии, нефтегазового сектора и энергетики.
+                <strong className="text-foreground font-oswald text-xl">AKD (Арт Корд Дизайн)</strong> — российский производитель лакокрасочных материалов и строительной химии. Мы производим полный спектр жидкой продукции для строительства и отделки: от фасадных и интерьерных красок до грунтовок, шпатлёвок, клеёв и растворителей.
               </p>
               <p className="font-ibm text-muted-foreground leading-relaxed mb-8 text-base">
-                В основе нашей работы — собственная научная база и партнёрство с ведущими исследовательскими институтами. Все рецептуры разработаны с учётом условий эксплуатации российских предприятий.
+                Отдельное направление — автохимия (пена для бесконтактной мойки) и садовая серия <strong className="text-foreground">«Сад-Эксперт»</strong>: защитные краски для деревьев и коллоидная сера для растений.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["Машиностроение", "Металлургия", "Нефтегаз", "Энергетика", "Горнодобыча", "Транспорт"].map((s) => (
+                {["Строительство", "Отделочные работы", "Садоводство", "Автомойки", "Производство", "Розничная торговля"].map((s) => (
                   <span key={s} className="border border-border font-ibm text-sm text-muted-foreground px-3 py-1.5 hover:border-[hsl(var(--primary))] hover:text-foreground transition-colors">
                     {s}
                   </span>
@@ -273,10 +294,10 @@ export default function Index() {
             </div>
             <div className="flex flex-col gap-4">
               {[
-                { icon: "ShieldCheck", title: "Гарантия качества", text: "Паспорт качества на каждую партию" },
-                { icon: "Award", title: "Сертификация", text: "ISO 9001:2015, ГОСТ Р ИСО 9001" },
-                { icon: "Leaf", title: "Экобезопасность", text: "Соответствие REACH и экологическим нормам" },
-                { icon: "Headphones", title: "Техподдержка", text: "Консультации инженеров-технологов" },
+                { icon: "ShieldCheck", title: "Контроль качества", text: "Лабораторная проверка каждой партии" },
+                { icon: "Droplets", title: "Полный ассортимент ЛКМ", text: "Краски, грунты, шпатлёвки, клеи, растворители" },
+                { icon: "Leaf", title: "Серия Сад-Эксперт", text: "Специализированные средства для садоводства" },
+                { icon: "Headphones", title: "Поддержка клиентов", text: "Консультации по подбору продукции" },
               ].map((item) => (
                 <div key={item.title} className="flex gap-3 p-4 border border-border bg-background">
                   <Icon name={item.icon} size={20} className="text-[hsl(var(--primary))] mt-0.5 shrink-0" />
@@ -296,6 +317,23 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="section-divider pb-10 mb-12">
             <h2 className="font-oswald text-4xl font-bold tracking-wide mt-6">КАТАЛОГ ПРОДУКЦИИ</h2>
+          </div>
+
+          {/* Плашка Сад-Эксперт */}
+          <div className="mb-8 p-5 border border-[hsl(var(--primary))]/40 bg-card flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="w-10 h-10 bg-green-900/40 border border-green-700/50 flex items-center justify-center shrink-0">
+              <Icon name="Leaf" size={20} className="text-green-400" />
+            </div>
+            <div className="flex-1">
+              <div className="font-oswald text-base font-bold text-foreground tracking-wide mb-0.5">Серия «Сад-Эксперт»</div>
+              <div className="font-ibm text-xs text-muted-foreground">Специальная линейка для садоводства: краски защитные для деревьев и сера коллоидная. Выберите категорию «Сад-Эксперт» ниже.</div>
+            </div>
+            <button
+              onClick={() => { setActiveCategory("Сад-Эксперт"); setActivePacking("Все"); }}
+              className="shrink-0 border border-green-700/50 text-green-400 font-oswald text-xs tracking-widest uppercase px-4 py-2 hover:bg-green-900/30 transition-colors whitespace-nowrap"
+            >
+              Смотреть серию
+            </button>
           </div>
 
           {/* Search + Pricelists */}
@@ -325,7 +363,7 @@ export default function Index() {
           </div>
 
           {/* Filters */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col gap-3 mb-8">
             <div className="flex flex-wrap gap-2">
               {CATEGORIES.map((cat) => (
                 <button
@@ -341,7 +379,7 @@ export default function Index() {
                 </button>
               ))}
             </div>
-            <div className="flex flex-wrap gap-2 sm:border-l sm:border-border sm:pl-4">
+            <div className="flex flex-wrap gap-2 border-t border-border pt-3">
               {PACKINGS.map((pack) => (
                 <button
                   key={pack}
@@ -380,7 +418,11 @@ export default function Index() {
                 <div key={product.id} className="group bg-card border border-border hover:border-[hsl(var(--primary))]/50 transition-all duration-200">
                   <div className="p-5">
                     <div className="flex items-start justify-between gap-2 mb-3">
-                      <span className="font-ibm text-[10px] text-[hsl(var(--primary))] uppercase tracking-widest border border-[hsl(var(--primary))]/30 px-2 py-0.5">
+                      <span className={`font-ibm text-[10px] uppercase tracking-widest border px-2 py-0.5 ${
+                        product.category === "Сад-Эксперт"
+                          ? "text-green-400 border-green-700/50"
+                          : "text-[hsl(var(--primary))] border-[hsl(var(--primary))]/30"
+                      }`}>
                         {product.category}
                       </span>
                       <span className="font-ibm text-[10px] text-muted-foreground border border-border px-2 py-0.5">
@@ -449,26 +491,32 @@ export default function Index() {
           <div className="section-divider pb-10 mb-12">
             <h2 className="font-oswald text-4xl font-bold tracking-wide mt-6">СЕРТИФИКАТЫ</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {CERTS.map((cert) => (
-              <div key={cert.name} className="group bg-card border border-border p-6 hover:border-[hsl(var(--primary))]/50 transition-all">
-                <div className="w-12 h-12 border-2 border-[hsl(var(--primary))] flex items-center justify-center mb-4">
-                  <Icon name="Award" size={22} className="text-[hsl(var(--primary))]" />
-                </div>
-                <div className="font-oswald text-lg font-bold text-foreground mb-1">{cert.name}</div>
-                <div className="font-ibm text-xs text-muted-foreground leading-relaxed mb-4">{cert.org}</div>
-                <div className="font-ibm text-[10px] text-muted-foreground border-t border-border pt-3 mt-auto">
-                  Действителен: {cert.year}
-                </div>
+          {CERTS.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-20 border border-border bg-card text-center">
+              <div className="w-16 h-16 border-2 border-border flex items-center justify-center mb-6">
+                <Icon name="Award" size={28} className="text-muted-foreground" />
               </div>
-            ))}
-          </div>
-          <div className="mt-8 p-5 bg-card border border-border flex items-start gap-4">
-            <Icon name="Info" size={18} className="text-[hsl(var(--primary))] mt-0.5 shrink-0" />
-            <p className="font-ibm text-sm text-muted-foreground">
-              Копии сертификатов и деклараций соответствия предоставляются по запросу. Свяжитесь с нашим отделом качества.
-            </p>
-          </div>
+              <div className="font-oswald text-xl text-foreground mb-3">Сертификаты в разработке</div>
+              <p className="font-ibm text-sm text-muted-foreground max-w-md">
+                Мы проходим процедуру сертификации. Документы будут размещены здесь после их получения.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {CERTS.map((cert) => (
+                <div key={cert.name} className="group bg-card border border-border p-6 hover:border-[hsl(var(--primary))]/50 transition-all">
+                  <div className="w-12 h-12 border-2 border-[hsl(var(--primary))] flex items-center justify-center mb-4">
+                    <Icon name="Award" size={22} className="text-[hsl(var(--primary))]" />
+                  </div>
+                  <div className="font-oswald text-lg font-bold text-foreground mb-1">{cert.name}</div>
+                  <div className="font-ibm text-xs text-muted-foreground leading-relaxed mb-4">{cert.org}</div>
+                  <div className="font-ibm text-[10px] text-muted-foreground border-t border-border pt-3 mt-auto">
+                    Действителен: {cert.year}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -563,9 +611,9 @@ export default function Index() {
             <div className="flex flex-col gap-6">
               {[
                 { icon: "Phone", label: "Телефон", value: "8 800 123-45-67", sub: "Бесплатно по России" },
-                { icon: "Mail", label: "Email", value: "info@promtech.ru", sub: "Ответим в течение 2 часов" },
+                { icon: "Mail", label: "Email", value: "info@akd-paint.ru", sub: "Ответим в течение 2 часов" },
                 { icon: "MapPin", label: "Адрес офиса", value: "г. Москва, ул. Промышленная, 14", sub: "Пн–Пт: 9:00–18:00" },
-                { icon: "Building2", label: "Производство", value: "Московская обл., г. Подольск", sub: "Самовывоз по согласованию" },
+                { icon: "Building2", label: "Производство", value: "Московская обл.", sub: "Самовывоз по согласованию" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4">
                   <div className="w-10 h-10 fire-gradient flex items-center justify-center shrink-0">
@@ -636,10 +684,10 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <div className="w-7 h-7 fire-gradient flex items-center justify-center">
-                <Icon name="Cog" size={14} className="text-white" />
+                <Icon name="Droplets" size={14} className="text-white" />
               </div>
               <div>
-                <div className="font-oswald font-700 text-base leading-none tracking-wider text-foreground">ПРОМТЕХ</div>
+                <div className="font-oswald font-700 text-base leading-none tracking-wider text-foreground">AKD</div>
                 <div className="font-ibm text-[9px] text-muted-foreground tracking-[0.15em] uppercase leading-none mt-0.5">© 2026. Все права защищены</div>
               </div>
             </div>
