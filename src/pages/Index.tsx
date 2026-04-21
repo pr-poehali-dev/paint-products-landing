@@ -129,7 +129,7 @@ export default function Index() {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className={`nav-link font-ibm text-sm tracking-wide transition-colors ${
+                  className={`nav-link font-ibm text-sm tracking-wide transition-colors text-left ${
                     activeSection === item.id ? "text-[hsl(var(--primary))]" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -140,9 +140,9 @@ export default function Index() {
 
             {/* CTA + Mobile */}
             <div className="flex items-center gap-3">
-              <a href="tel:+78001234567" className="hidden sm:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="tel:+79673337603" className="hidden sm:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Icon name="Phone" size={14} className="text-[hsl(var(--primary))]" />
-                <span className="font-ibm">8 800 123-45-67</span>
+                <span className="font-ibm">8 967 333-76-03</span>
               </a>
               <button
                 className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
@@ -610,7 +610,7 @@ export default function Index() {
             {/* Contact info */}
             <div className="flex flex-col gap-6">
               {[
-                { icon: "Phone", label: "Телефон", value: "8 800 123-45-67", sub: "Бесплатно по России" },
+                { icon: "Phone", label: "Телефон", value: "8 967 333-76-03", sub: "" },
                 { icon: "Mail", label: "Email", value: "info@akd-paint.ru", sub: "Ответим в течение 2 часов" },
                 { icon: "MapPin", label: "Адрес офиса", value: "г. Москва, ул. Промышленная, 14", sub: "Пн–Пт: 9:00–18:00" },
                 { icon: "Building2", label: "Производство", value: "Московская обл.", sub: "Самовывоз по согласованию" },
